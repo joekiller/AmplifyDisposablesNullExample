@@ -40,11 +40,13 @@ import com.amplifyframework.datastore.generated.model.Model20;
 import com.amplifyframework.hub.HubChannel;
 import com.amplifyframework.hub.HubEvent;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import java.util.ArrayList;
 import java.util.UUID;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
@@ -52,7 +54,7 @@ import java.util.concurrent.ExecutionException;
 @RunWith(AndroidJUnit4.class)
 public class ExampleInstrumentedTest {
     private String ID;
-    private String TAG = "amplify:bug";
+    static final String TAG = "amplifydisposablesnullexample:TestRunner";
     private String EMAIL = ID + "@test.com";
     private String LOGIN = ID;
     private String PASSWORD = "EXAMPLE12354";
@@ -60,7 +62,6 @@ public class ExampleInstrumentedTest {
     @Before
     public void before() {
         ID = UUID.randomUUID().toString();
-        TAG = "amplify:bug";
         EMAIL = ID + "@test.com";
         LOGIN = ID;
         PASSWORD = "EXAMPLE12354";
@@ -71,47 +72,60 @@ public class ExampleInstrumentedTest {
     public ActivityScenarioRule<MainActivity> activityRule = new ActivityScenarioRule<>(MainActivity.class);
 
     public void init() {
-        Log.d("main", "init started");
+        Log.d(TAG, "init started");
         if (!checkAuth()) {
             fail("auth failed");
-        };
+        }
         CompletableFuture<HubEvent<?>> readyFuture = new CompletableFuture<>();
         Amplify.Hub.subscribe(HubChannel.DATASTORE,
-                event -> DataStoreChannelEventName.SYNC_QUERIES_READY.toString().equals(event.getName()),
+                event -> DataStoreChannelEventName.READY.toString().equals(event.getName()),
                 readyFuture::complete);
 
-        Log.d("main", "begin start");
+        Log.d(TAG, "begin start");
         Amplify.DataStore.start(
-                () -> Log.d("main", "Amplify DataStore sync explicitly initiated."),
-                error -> Log.e("main", "Amplify DataStore sync did not initiate.", error)
+                () -> Log.d(TAG, "Amplify DataStore sync explicitly initiated."),
+                error -> Log.e(TAG, "Amplify DataStore sync did not initiate.", error)
         );
 
         try {
             readyFuture.get();
-            Log.d("main", "start finished");
+            Log.d(TAG, "start finished");
         } catch (ExecutionException | InterruptedException e) {
             fail(e.getMessage());
         }
-        Log.d("main", "init finished");
+        Log.d(TAG, "init finished");
     }
 
     public void clear() {
-        Log.d("main", "clear started");
+        Log.d(TAG, "clear started");
         unbindSubscriptionHooks();
+        signOut();
+        clearDatastore();
+    }
+
+    public void signOut() {
         CompletableFuture<Void> signOutComplete = new CompletableFuture<>();
-        CompletableFuture<Void> clearComplete = new CompletableFuture<>();
-        Log.d("main", "begin signOut");
+        Log.d(TAG, "begin signOut");
         Amplify.Auth.signOut(() -> signOutComplete.complete(null), e -> fail(e.getMessage()));
         signOutComplete.join();
-        Log.d("main", "end signOut");
-        Log.d("main", "begin clear");
+        Log.d(TAG, "end signOut");
+    }
+
+    public void clearDatastore() {
+        CompletableFuture<Void> clearComplete = new CompletableFuture<>();
+        Log.d(TAG, "begin clear");
         Amplify.DataStore.clear(
                 () -> clearComplete.complete(null),
                 e -> fail(e.getMessage())
         );
         clearComplete.join();
-        Log.d("main", "clear finished");
+        Log.d(TAG, "clear finished");
     }
+
+//    @After
+//    public void after() {
+//        clear();
+//    }
 
     public void test() {
         Log.i(TAG, "starting test");
@@ -121,7 +135,6 @@ public class ExampleInstrumentedTest {
         bindSubscriptionHooks();
 
         CompletableFuture<AmplifyBug> createFuture = new CompletableFuture<>();
-        CompletableFuture<AmplifyBug> updateFuture = new CompletableFuture<>();
 
         AmplifyBug createRecord = AmplifyBug.builder().updated(Boolean.FALSE).build();
         Amplify.DataStore.save(
@@ -130,26 +143,12 @@ public class ExampleInstrumentedTest {
                 createFuture::completeExceptionally
         );
         try {
-            AmplifyBug createRecordReturned = createFuture.get();
-
-            AmplifyBug updateRecord = createRecordReturned.copyOfBuilder().updated(Boolean.TRUE).build();
-            Amplify.DataStore.save(
-                    updateRecord,
-                    success -> updateFuture.complete(success.item()),
-                    updateFuture::completeExceptionally
-            );
-            updateFuture.get();
+            createFuture.get();
         } catch (ExecutionException | InterruptedException e) {
             Log.e(TAG, "failed to transact record", e);
             fail(e.getMessage());
         }
 
-
-        try {
-            Thread.sleep(5000); // sleep for 5 seconds to accumulate logs
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         Log.i(TAG, "finishing test");
     }
 
@@ -259,30 +258,18 @@ public class ExampleInstrumentedTest {
     private void unbindSubscription(Cancelable c) {
         if (null != c) {
             c.cancel();
-            c = null;
         }
     }
 
-    Cancelable m1 = null;
-    Cancelable m2 = null;
-    Cancelable m3 = null;
-    Cancelable m4 = null;
-    Cancelable m5 = null;
-    Cancelable m6 = null;
-    Cancelable m7 = null;
-    Cancelable m8 = null;
-    Cancelable m9 = null;
-    Cancelable m10 = null;
-    Cancelable m11 = null;
-    Cancelable m12 = null;
-    Cancelable m13 = null;
-    Cancelable m14 = null;
-    Cancelable m15 = null;
-    Cancelable m16 = null;
-    Cancelable m17 = null;
-    Cancelable m18 = null;
-    Cancelable m19 = null;
-    Cancelable m20 = null;
+    /**
+     * Turn off events.
+     */
+    private void unbindSubscriptions() {
+        subscriptions.forEach(this::unbindSubscription);
+        subscriptions = new ArrayList<>();
+    }
+
+    ArrayList<Cancelable> subscriptions = new ArrayList<>();
 
     /**
      * Observes Profile model to see if basal rate has changed
@@ -293,7 +280,7 @@ public class ExampleInstrumentedTest {
                 hook::complete,
                 onChange -> {
                     if (!onChange.type().equals(DataStoreItemChange.Type.CREATE)) {
-                        Log.i(TAG, "Bump");
+                        Log.i(TAG, m.getName() + " model created!");
                     }
                 },
                 hook::completeExceptionally,
@@ -315,26 +302,7 @@ public class ExampleInstrumentedTest {
      */
     private void unbindSubscriptionHooks()
     {
-        unbindSubscription(m1);
-        unbindSubscription(m2);
-        unbindSubscription(m3);
-        unbindSubscription(m4);
-        unbindSubscription(m5);
-        unbindSubscription(m6);
-        unbindSubscription(m7);
-        unbindSubscription(m8);
-        unbindSubscription(m9);
-        unbindSubscription(m10);
-        unbindSubscription(m11);
-        unbindSubscription(m12);
-        unbindSubscription(m13);
-        unbindSubscription(m14);
-        unbindSubscription(m15);
-        unbindSubscription(m16);
-        unbindSubscription(m17);
-        unbindSubscription(m18);
-        unbindSubscription(m19);
-        unbindSubscription(m20);
+        unbindSubscriptions();
     }
 
     /**
@@ -342,26 +310,26 @@ public class ExampleInstrumentedTest {
      */
     private void bindSubscriptionHooks()
     {
-        m1 = bindSubscription(AmplifyBug.class);
-        m2 = bindSubscription(Model02.class);
-        m3 = bindSubscription(Model03.class);
-        m4 = bindSubscription(Model04.class);
-        m5 = bindSubscription(Model05.class);
-        m6 = bindSubscription(Model06.class);
-        m7 = bindSubscription(Model07.class);
-        m8 = bindSubscription(Model08.class);
-        m9 = bindSubscription(Model09.class);
-        m10 = bindSubscription(Model10.class);
-        m11 = bindSubscription(Model11.class);
-        m12 = bindSubscription(Model12.class);
-        m13 = bindSubscription(Model13.class);
-        m14 = bindSubscription(Model14.class);
-        m15 = bindSubscription(Model15.class);
-        m16 = bindSubscription(Model16.class);
-        m17 = bindSubscription(Model17.class);
-        m18 = bindSubscription(Model18.class);
-        m19 = bindSubscription(Model19.class);
-        m20 = bindSubscription(Model20.class);
+        bindSubscription(AmplifyBug.class);
+        bindSubscription(Model02.class);
+        bindSubscription(Model03.class);
+        bindSubscription(Model04.class);
+        bindSubscription(Model05.class);
+        bindSubscription(Model06.class);
+        bindSubscription(Model07.class);
+        bindSubscription(Model08.class);
+        bindSubscription(Model09.class);
+        bindSubscription(Model10.class);
+        bindSubscription(Model11.class);
+        bindSubscription(Model12.class);
+        bindSubscription(Model13.class);
+        bindSubscription(Model14.class);
+        bindSubscription(Model15.class);
+        bindSubscription(Model16.class);
+        bindSubscription(Model17.class);
+        bindSubscription(Model18.class);
+        bindSubscription(Model19.class);
+        bindSubscription(Model20.class);
     }
 
     private boolean checkAuth() {
