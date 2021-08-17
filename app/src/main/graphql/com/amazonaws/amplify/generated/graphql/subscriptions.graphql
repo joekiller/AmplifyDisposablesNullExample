@@ -1,0 +1,1045 @@
+# this is an auto generated file. This will be overwritten
+subscription OnCreateAmplifyBug($owner: String!) {
+  onCreateAmplifyBug(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnUpdateAmplifyBug($owner: String!) {
+  onUpdateAmplifyBug(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnDeleteAmplifyBug($owner: String!) {
+  onDeleteAmplifyBug(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnCreateModel02($owner: String!) {
+  onCreateModel02(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnUpdateModel02($owner: String!) {
+  onUpdateModel02(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnDeleteModel02($owner: String!) {
+  onDeleteModel02(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnCreateModel03($owner: String!) {
+  onCreateModel03(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnUpdateModel03($owner: String!) {
+  onUpdateModel03(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnDeleteModel03($owner: String!) {
+  onDeleteModel03(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnCreateModel04($owner: String!) {
+  onCreateModel04(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnUpdateModel04($owner: String!) {
+  onUpdateModel04(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnDeleteModel04($owner: String!) {
+  onDeleteModel04(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnCreateModel05($owner: String!) {
+  onCreateModel05(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnUpdateModel05($owner: String!) {
+  onUpdateModel05(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnDeleteModel05($owner: String!) {
+  onDeleteModel05(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnCreateModel06($owner: String!) {
+  onCreateModel06(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnUpdateModel06($owner: String!) {
+  onUpdateModel06(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnDeleteModel06($owner: String!) {
+  onDeleteModel06(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnCreateModel07($owner: String!) {
+  onCreateModel07(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnUpdateModel07($owner: String!) {
+  onUpdateModel07(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnDeleteModel07($owner: String!) {
+  onDeleteModel07(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnCreateModel08($owner: String!) {
+  onCreateModel08(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnUpdateModel08($owner: String!) {
+  onUpdateModel08(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnDeleteModel08($owner: String!) {
+  onDeleteModel08(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnCreateModel09($owner: String!) {
+  onCreateModel09(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnUpdateModel09($owner: String!) {
+  onUpdateModel09(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnDeleteModel09($owner: String!) {
+  onDeleteModel09(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnCreateModel10($owner: String!) {
+  onCreateModel10(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnUpdateModel10($owner: String!) {
+  onUpdateModel10(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnDeleteModel10($owner: String!) {
+  onDeleteModel10(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnCreateModel11($owner: String!) {
+  onCreateModel11(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnUpdateModel11($owner: String!) {
+  onUpdateModel11(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnDeleteModel11($owner: String!) {
+  onDeleteModel11(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnCreateModel12($owner: String!) {
+  onCreateModel12(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnUpdateModel12($owner: String!) {
+  onUpdateModel12(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnDeleteModel12($owner: String!) {
+  onDeleteModel12(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnCreateModel6($owner: String!) {
+  onCreateModel6(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnUpdateModel6($owner: String!) {
+  onUpdateModel6(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnDeleteModel6($owner: String!) {
+  onDeleteModel6(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnCreateModel13($owner: String!) {
+  onCreateModel13(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnUpdateModel13($owner: String!) {
+  onUpdateModel13(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnDeleteModel13($owner: String!) {
+  onDeleteModel13(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnCreateModel14($owner: String!) {
+  onCreateModel14(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnUpdateModel14($owner: String!) {
+  onUpdateModel14(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnDeleteModel14($owner: String!) {
+  onDeleteModel14(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnCreateModel15($owner: String!) {
+  onCreateModel15(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnUpdateModel15($owner: String!) {
+  onUpdateModel15(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnDeleteModel15($owner: String!) {
+  onDeleteModel15(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnCreateModel16($owner: String!) {
+  onCreateModel16(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnUpdateModel16($owner: String!) {
+  onUpdateModel16(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnDeleteModel16($owner: String!) {
+  onDeleteModel16(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnCreateModel17($owner: String!) {
+  onCreateModel17(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnUpdateModel17($owner: String!) {
+  onUpdateModel17(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnDeleteModel17($owner: String!) {
+  onDeleteModel17(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnCreateModel18($owner: String!) {
+  onCreateModel18(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnUpdateModel18($owner: String!) {
+  onUpdateModel18(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnDeleteModel18($owner: String!) {
+  onDeleteModel18(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnCreateModel19($owner: String!) {
+  onCreateModel19(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnUpdateModel19($owner: String!) {
+  onUpdateModel19(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnDeleteModel19($owner: String!) {
+  onDeleteModel19(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnCreateModel20($owner: String!) {
+  onCreateModel20(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnUpdateModel20($owner: String!) {
+  onUpdateModel20(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnDeleteModel20($owner: String!) {
+  onDeleteModel20(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnCreateModel21($owner: String!) {
+  onCreateModel21(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnUpdateModel21($owner: String!) {
+  onUpdateModel21(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnDeleteModel21($owner: String!) {
+  onDeleteModel21(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnCreateModel22($owner: String!) {
+  onCreateModel22(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnUpdateModel22($owner: String!) {
+  onUpdateModel22(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnDeleteModel22($owner: String!) {
+  onDeleteModel22(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnCreateModel23($owner: String!) {
+  onCreateModel23(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnUpdateModel23($owner: String!) {
+  onUpdateModel23(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnDeleteModel23($owner: String!) {
+  onDeleteModel23(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnCreateModel24($owner: String!) {
+  onCreateModel24(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnUpdateModel24($owner: String!) {
+  onUpdateModel24(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnDeleteModel24($owner: String!) {
+  onDeleteModel24(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnCreateModel25($owner: String!) {
+  onCreateModel25(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnUpdateModel25($owner: String!) {
+  onUpdateModel25(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnDeleteModel25($owner: String!) {
+  onDeleteModel25(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnCreateModel26($owner: String!) {
+  onCreateModel26(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnUpdateModel26($owner: String!) {
+  onUpdateModel26(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnDeleteModel26($owner: String!) {
+  onDeleteModel26(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnCreateModel27($owner: String!) {
+  onCreateModel27(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnUpdateModel27($owner: String!) {
+  onUpdateModel27(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnDeleteModel27($owner: String!) {
+  onDeleteModel27(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnCreateModel28($owner: String!) {
+  onCreateModel28(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnUpdateModel28($owner: String!) {
+  onUpdateModel28(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnDeleteModel28($owner: String!) {
+  onDeleteModel28(owner: $owner) {
+    id
+    updated
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+    owner
+  }
+}

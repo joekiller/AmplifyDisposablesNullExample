@@ -71,6 +71,7 @@ public class ExampleInstrumentedTest {
     public ActivityScenarioRule<MainActivity> activityRule = new ActivityScenarioRule<>(MainActivity.class);
 
     public void init() {
+        Log.d("main", "init started");
         if (!checkAuth()) {
             fail("auth failed");
         };
@@ -89,9 +90,11 @@ public class ExampleInstrumentedTest {
         } catch (ExecutionException | InterruptedException e) {
             fail(e.getMessage());
         }
+        Log.d("main", "init finished");
     }
 
     public void clear() {
+        Log.d("main", "clear started");
         unbindSubscriptionHooks();
         CompletableFuture<Void> signOutComplete = new CompletableFuture<>();
         CompletableFuture<Void> clearComplete = new CompletableFuture<>();
@@ -105,6 +108,7 @@ public class ExampleInstrumentedTest {
         );
         signOutComplete.join();
         clearComplete.join();
+        Log.d("main", "clear finished");
     }
 
     public void test() {
