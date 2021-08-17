@@ -1,0 +1,192 @@
+type AmplifyBug @model @auth(rules: [{ allow: owner }]) {
+  id: ID!
+  updated: Boolean!
+}
+
+type Model02 @model @auth(rules: [{ allow: owner }]) {
+  id: ID!
+  updated: Boolean!
+}
+
+type Model03 @model @auth(rules: [{ allow: owner }]) {
+  id: ID!
+  updated: Boolean!
+}
+
+type Model04 @model @auth(rules: [{ allow: owner }]) {
+  id: ID!
+  updated: Boolean!
+}
+
+type Model05 @model @auth(rules: [{ allow: owner }]) {
+  id: ID!
+  updated: Boolean!
+}
+
+
+type Model06 @model @auth(rules: [{ allow: owner }]) {
+  id: ID!
+  updated: Boolean!
+}
+
+
+
+type Model07 @model @auth(rules: [{ allow: owner }]) {
+  id: ID!
+  updated: Boolean!
+}
+
+
+
+type Model08 @model @auth(rules: [{ allow: owner }]) {
+  id: ID!
+  updated: Boolean!
+}
+
+
+
+type Model09 @model @auth(rules: [{ allow: owner }]) {
+  id: ID!
+  updated: Boolean!
+}
+
+
+
+type Model10 @model @auth(rules: [{ allow: owner }]) {
+  id: ID!
+  updated: Boolean!
+}
+
+
+
+type Model11 @model @auth(rules: [{ allow: owner }]) {
+  id: ID!
+  updated: Boolean!
+}
+
+
+
+type Model12 @model @auth(rules: [{ allow: owner }]) {
+  id: ID!
+  updated: Boolean!
+}
+
+
+
+type Model6 @model @auth(rules: [{ allow: owner }]) {
+  id: ID!
+  updated: Boolean!
+}
+
+
+
+type Model13 @model @auth(rules: [{ allow: owner }]) {
+  id: ID!
+  updated: Boolean!
+}
+
+
+
+type Model14 @model @auth(rules: [{ allow: owner }]) {
+  id: ID!
+  updated: Boolean!
+}
+
+
+
+type Model15 @model @auth(rules: [{ allow: owner }]) {
+  id: ID!
+  updated: Boolean!
+}
+
+
+
+type Model16 @model @auth(rules: [{ allow: owner }]) {
+  id: ID!
+  updated: Boolean!
+}
+
+
+
+type Model17 @model @auth(rules: [{ allow: owner }]) {
+  id: ID!
+  updated: Boolean!
+}
+
+
+
+type Model18 @model @auth(rules: [{ allow: owner }]) {
+  id: ID!
+  updated: Boolean!
+}
+
+
+
+type Model19 @model @auth(rules: [{ allow: owner }]) {
+  id: ID!
+  updated: Boolean!
+}
+
+
+
+type Model20 @model @auth(rules: [{ allow: owner }]) {
+  id: ID!
+  updated: Boolean!
+}
+
+
+
+type Model21 @model @auth(rules: [{ allow: owner }]) {
+  id: ID!
+  updated: Boolean!
+}
+
+
+
+type Model22 @model @auth(rules: [{ allow: owner }]) {
+  id: ID!
+  updated: Boolean!
+}
+
+
+
+type Model23 @model @auth(rules: [{ allow: owner }]) {
+  id: ID!
+  updated: Boolean!
+}
+
+
+
+type Model24 @model @auth(rules: [{ allow: owner }]) {
+  id: ID!
+  updated: Boolean!
+}
+
+
+
+type Model25 @model @auth(rules: [{ allow: owner }]) {
+  id: ID!
+  updated: Boolean!
+}
+
+
+
+type Model26 @model @auth(rules: [{ allow: owner }]) {
+  id: ID!
+  updated: Boolean!
+}
+
+
+
+type Model27 @model @auth(rules: [{ allow: owner }]) {
+  id: ID!
+  updated: Boolean!
+}
+
+
+
+type Model28 @model @auth(rules: [{ allow: owner }]) {
+  id: ID!
+  updated: Boolean!
+}
+
