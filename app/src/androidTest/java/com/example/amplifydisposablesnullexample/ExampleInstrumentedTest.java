@@ -80,6 +80,7 @@ public class ExampleInstrumentedTest {
                 event -> DataStoreChannelEventName.SYNC_QUERIES_READY.toString().equals(event.getName()),
                 readyFuture::complete);
 
+        Log.d("main", "begin start");
         Amplify.DataStore.start(
                 () -> Log.d("main", "Amplify DataStore sync explicitly initiated."),
                 error -> Log.e("main", "Amplify DataStore sync did not initiate.", error)
@@ -87,6 +88,7 @@ public class ExampleInstrumentedTest {
 
         try {
             readyFuture.get();
+            Log.d("main", "start finished");
         } catch (ExecutionException | InterruptedException e) {
             fail(e.getMessage());
         }
@@ -98,15 +100,15 @@ public class ExampleInstrumentedTest {
         unbindSubscriptionHooks();
         CompletableFuture<Void> signOutComplete = new CompletableFuture<>();
         CompletableFuture<Void> clearComplete = new CompletableFuture<>();
+        Log.d("main", "begin signOut");
         Amplify.Auth.signOut(() -> signOutComplete.complete(null), e -> fail(e.getMessage()));
+        signOutComplete.join();
+        Log.d("main", "end signOut");
+        Log.d("main", "begin clear");
         Amplify.DataStore.clear(
-                () -> {
-                    Log.d("main", "Amplify DataStore clear explicitly initiated.");
-                    clearComplete.complete(null);
-                },
+                () -> clearComplete.complete(null),
                 e -> fail(e.getMessage())
         );
-        signOutComplete.join();
         clearComplete.join();
         Log.d("main", "clear finished");
     }
